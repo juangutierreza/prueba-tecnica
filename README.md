@@ -106,17 +106,13 @@ El frontend intenta cargar las tareas pero el endpoint no existe en el backend.
 
 ### Ejercicio 4: Modificar una tarea
 
-El icono de editar (lapiz) en cada tarjeta ya abre un modal con `TaskForm`, pero no se aplican los cambios.
-
-- Adapta `TaskForm` para que cuando reciba una prop `task`, cargue los datos en los inputs y cambie el boton a "Modificar".
-- Haz que el submit llame a la API de update (`PUT /api/tasks/:id`) y los cambios se reflejen en el listado.
+Importa el icono `EditIcon` en `TaskForm`, ponlo en el IconButton que utilizaremos para editar. Y haz que onClick abra el modal para editar Task
 
 ### Ejercicio 5: Componente ConfirmDialog
 
-Existe un componente `ConfirmDialog` que recibe: `title`, `text`, `onAction`, `onCancel`.
+Haz un componente ConfirmDialog que reciba: `title`, `text`, `onAction`, `onCancel`.
 
-- Revisa como se usa actualmente en `Home.jsx` para eliminar y completar tareas.
-- Cambia los textos o estilos del ConfirmDialog si lo consideras necesario.
+Y sustituye todos los window.confirm() por este nuevo componente
 
 ### Ejercicio 6: Arreglar refresco al crear tarea
 
